@@ -30,6 +30,13 @@ Người dùng có thể làm theo các bước sau
 6. Lựa chọn loại mặt hàng mong muốn và thêm vào giỏ hàng (cart).(đây là bước CRUD chính của ứng dụng)
 7. Sau khi chắc chắn với sản phẩm sẽ có phần payment
 8. Điền thông tin thẻ tín dụng và nhận hóa đơn trên ứng dụng
+## Ưu điểm của ứng dụng
+1. Đã chạy được ứng dụng
+2. Có đầy đủ chức năng thêm sửa xóa
+3. Tích hợp cùng firebase để lưu trữ thông tin người dùng, thời gian đặt hàng và thông tin chi tiết về đơn hàng
+## Nhược điểm của ứng dụng
+1. Thực hiện được 1/2 test yêu cầu được đưa ra
+2. Do có một số bug nên chưa thể hoàn thành đủ số test yêu cầu
 ## Tiêu chí đánh giá
 **5/10 điểm - Build thành công (GitHub Actions báo “Success”)**
 - Sinh viên đạt tối thiểu 5 điểm nếu GitHub Actions hoàn thành build và kiểm thử mà không có lỗi nào xảy ra (kết quả báo “Success”).

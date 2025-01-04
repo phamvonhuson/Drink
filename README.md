@@ -78,6 +78,6 @@ Người dùng có thể làm theo các bước sau
 - **9/10**: Hoàn thiện kiểm thử CRUD, trạng thái, tích hợp API/CSDL; UI thân thiện.
 - **10/10**: Tối ưu hóa hoàn chỉnh, UI/UX mượt mà, CI/CD đầy đủ và ổn định.
 
-## Tự đánh giá điểm: 6/10
+## Tự đánh giá điểm: 7/10
 Bài tập của em đã có tích hợp với firebase, đã có CRUD nhưng do điều kiện máy laptop không cho phép nên em đã phải chạy bằng web chứ không thể chạy bằng máy ảo.Cùng với đó là github action em chưa thực sự hiểu và thành thục do đây là lần đầu tiên em sử dụng git hub. Em sẽ cố gắng trong các học phần sau và mong thầy chiếu cố ạ.
 

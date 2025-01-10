@@ -1,29 +1,35 @@
 import 'package:flutter/material.dart';
-import 'coffee.dart';
+import 'drink.dart';
 
-class CoffeeShop extends ChangeNotifier {
+class DrinkShop extends ChangeNotifier {
   // Coffee for sales list
   final List<Coffee> _shop = [
-    // black coffee
+    // americano
     Coffee(
-        name: 'long black', imagePath: "lib/images/coffee.png", price: "4.10"),
+        name: 'americano', imagePath: "lib/images/americano.png", price: "4.10"),
 
-    // latte
-    Coffee(name: 'latte', imagePath: "lib/images/latte.png", price: "5.10"),
+    // frappe
+    Coffee(name: 'frappe', imagePath: "lib/images/frappe.png", price: "5.10"),
 
     // espresso
     Coffee(
         name: 'espresso', imagePath: "lib/images/espresso.png", price: "4.20"),
 
-    // iced coffee
+    // cappuccino
     Coffee(
-        name: 'iced-coffee',
-        imagePath: "lib/images/iced-coffee.png",
+        name: 'cappuccino',
+        imagePath: "lib/images/cappuccino.png",
         price: "4.45"),
+            // mocha
+    Coffee(
+        name: 'mocha',
+        imagePath: "lib/images/mocha.png",
+        price: "4.45"),
+
   ];
 
   // User cart
-  List<Coffee> _userCart = [];
+  final List<Coffee> _userCart = [];
 
   // Get the coffee list
   List<Coffee> get coffeeShop => _shop;

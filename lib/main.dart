@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_project/auth/auth_gate.dart';
 import 'package:flutter_project/firebase_options.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_project/models/coffee_shop.dart';
+import 'package:flutter_project/models/drink_shop.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(MainApp());
+  runApp(const MainApp());
 }
 
 class MainApp extends StatelessWidget {
@@ -18,11 +18,11 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => CoffeeShop()),
+        ChangeNotifierProvider(create: (_) => DrinkShop()),
       ],
-      child: MaterialApp(
+      child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: const AuthGate(),
+        home: AuthGate(),
       ),
     );
   }

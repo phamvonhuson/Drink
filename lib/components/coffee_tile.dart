@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project/models/coffee.dart';
+import 'package:flutter_project/models/drink.dart';
 
 class CoffeeTile extends StatefulWidget {
   final Coffee coffee;

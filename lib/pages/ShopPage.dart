@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project/components/coffee_tile.dart';
-import 'package:flutter_project/models/coffee.dart';
-import 'package:flutter_project/models/coffee_shop.dart';
+import 'package:flutter_project/models/drink.dart';
+import 'package:flutter_project/models/drink_shop.dart';
 import 'package:provider/provider.dart';
 
 class Shoppage extends StatefulWidget {
@@ -14,7 +14,7 @@ class Shoppage extends StatefulWidget {
 class _ShoppageState extends State<Shoppage> {
   //add coffee to cart
   void addToCart(Coffee coffee) {
-    Provider.of<CoffeeShop>(context, listen: false).addItemToCart(coffee);
+    Provider.of<DrinkShop>(context, listen: false).addItemToCart(coffee);
 
     //user know when the coffee added
     showDialog(
@@ -26,7 +26,7 @@ class _ShoppageState extends State<Shoppage> {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<CoffeeShop>(
+    return Consumer<DrinkShop>(
       builder: (context, value, child) => SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(25),

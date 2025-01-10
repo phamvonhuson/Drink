@@ -41,13 +41,13 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBGhbo8x84u0XKiMRDJIAGlGkeDmEDQk-4',
-    appId: '1:29211106170:web:893910fed984828894d4c3',
-    messagingSenderId: '29211106170',
-    projectId: 'flutter-project-94d02',
-    authDomain: 'flutter-project-94d02.firebaseapp.com',
-    storageBucket: 'flutter-project-94d02.firebasestorage.app',
-    measurementId: 'G-GBL51YS8YC',
+    apiKey: 'AIzaSyC87jpP70jwKGJuu-8Sb19aHjTXW29NPgY',
+    appId: '1:676908445904:web:eec4bcde769c2089b12ed5',
+    messagingSenderId: '676908445904',
+    projectId: 'drink-5f4d1',
+    authDomain: 'drink-5f4d1.firebaseapp.com',
+    storageBucket: 'drink-5f4d1.firebasestorage.app',
+    measurementId: 'G-CW6KZN3P6D',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
@@ -68,22 +68,22 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBD3fAmtR7sszrzCs4om_9BESq6UOsA7s8',
-    appId: '1:29211106170:ios:3fd2558140a8b02894d4c3',
-    messagingSenderId: '29211106170',
-    projectId: 'flutter-project-94d02',
-    storageBucket: 'flutter-project-94d02.firebasestorage.app',
+    apiKey: 'AIzaSyDnx0KQj-6yWA92qtnKAeR80zD6tS22ock',
+    appId: '1:676908445904:ios:814626939fd1c922b12ed5',
+    messagingSenderId: '676908445904',
+    projectId: 'drink-5f4d1',
+    storageBucket: 'drink-5f4d1.firebasestorage.app',
     iosBundleId: 'com.example.flutterProject',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBGhbo8x84u0XKiMRDJIAGlGkeDmEDQk-4',
-    appId: '1:29211106170:web:f45b9e982e3aff6494d4c3',
-    messagingSenderId: '29211106170',
-    projectId: 'flutter-project-94d02',
-    authDomain: 'flutter-project-94d02.firebaseapp.com',
-    storageBucket: 'flutter-project-94d02.firebasestorage.app',
-    measurementId: 'G-G54HNT40BG',
+    apiKey: 'AIzaSyC87jpP70jwKGJuu-8Sb19aHjTXW29NPgY',
+    appId: '1:676908445904:web:c36e820592adfe56b12ed5',
+    messagingSenderId: '676908445904',
+    projectId: 'drink-5f4d1',
+    authDomain: 'drink-5f4d1.firebaseapp.com',
+    storageBucket: 'drink-5f4d1.firebasestorage.app',
+    measurementId: 'G-LYJ78F9VJ4',
   );
 
 }

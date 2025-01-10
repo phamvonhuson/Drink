@@ -3,10 +3,10 @@ import 'package:flutter_project/auth/auth_service.dart';
 import 'package:flutter_project/const.dart';
 
 class SignUpPage extends StatefulWidget {
-  final VoidCallback onTap; // Thêm tham số onTap
+  final VoidCallback onTap; // onTap function
 
   const SignUpPage(
-      {super.key, required this.onTap}); // Sử dụng tham số trong constructor
+      {super.key, required this.onTap}); // constructor with onTap function
 
   @override
   State<SignUpPage> createState() => _SignUpPageState();
@@ -18,13 +18,13 @@ class _SignUpPageState extends State<SignUpPage> {
   final TextEditingController _confirmPasswordController =
       TextEditingController();
 
-  // Hàm đăng ký người dùng
+  // sign up function
   void register() async {
     final _authService = AuthService();
 
-    // Kiểm tra mật khẩu và xác nhận mật khẩu có khớp hay không
+    // check if password and confirm password are the same
     if (_passwordController.text != _confirmPasswordController.text) {
-      // Nếu mật khẩu không khớp
+      // if not, show alert dialog
       showDialog(
         context: context,
         builder: (context) => const AlertDialog(
@@ -34,17 +34,17 @@ class _SignUpPageState extends State<SignUpPage> {
       return;
     }
 
-    // Tiến hành đăng ký nếu mật khẩu khớp
+    // sign up
     try {
       await _authService.signUp(
         _emailController.text.trim(),
         _passwordController.text.trim(),
       );
 
-      // Điều hướng về trang login sau khi đăng ký thành công
+      // back to login page
       widget.onTap();
     } catch (e) {
-      // Hiển thị thông báo lỗi khi có lỗi xảy ra trong quá trình đăng ký
+      // show alert dialog if error 
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
@@ -60,7 +60,7 @@ class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor, // Màu nền
+      backgroundColor: backgroundColor, // color of background
       body: Center(
         child: SingleChildScrollView(
           child: Column(
@@ -69,19 +69,19 @@ class _SignUpPageState extends State<SignUpPage> {
               Icon(
                 Icons.person_add,
                 size: 100,
-                color: primaryColor, // Màu chính
+                color: primaryColor, // color of icon
               ),
               const SizedBox(height: 20),
               const Text(
                 "Create a New Account",
                 style: TextStyle(
-                  color: textColor, // Màu chữ
+                  color: textColor, // color of text
                   fontSize: 20,
                 ),
               ),
               const SizedBox(height: 20),
 
-              // Ô nhập email
+              // email textfield
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: TextField(
@@ -99,7 +99,7 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
               const SizedBox(height: 15),
 
-              // Ô nhập mật khẩu
+              
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: TextField(
@@ -131,7 +131,7 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
               const SizedBox(height: 15),
 
-              // Ô nhập lại mật khẩu
+              // password textfield
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: TextField(
@@ -163,7 +163,7 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
               const SizedBox(height: 20),
 
-              // Nút Sign Up
+              // Sign Up button
               ElevatedButton(
                 onPressed: () {
                   final email = _emailController.text;
@@ -179,7 +179,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                     );
                   } else {
-                    register(); // Gọi hàm đăng ký
+                    register(); // register
                   }
                 },
                 style: ElevatedButton.styleFrom(
@@ -192,7 +192,7 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
               const SizedBox(height: 20),
 
-              // Liên kết trở về trang Login
+              // Link to login
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -202,7 +202,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pop(context); // Quay về trang Login
+                      Navigator.pop(context); // back to Login
                     },
                     child: const Text(
                       "Login",

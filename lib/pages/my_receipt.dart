@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project/models/coffee_shop.dart';
+import 'package:flutter_project/models/drink_shop.dart';
 import 'package:flutter_project/services/database/firestore.dart';
 import 'package:provider/provider.dart';
 
@@ -17,8 +17,8 @@ class _MyReceiptState extends State<MyReceipt> {
   @override
 void initState() {
   super.initState();
-  // Sử dụng Provider để lấy thông tin từ CoffeeShop
-  String receipt = Provider.of<CoffeeShop>(context, listen: false).displayCartReceipt();
+  // print the receipt
+  String receipt = Provider.of<DrinkShop>(context, listen: false).displayCartReceipt();
   db.saveOrderToDatabase(receipt);
 }
 

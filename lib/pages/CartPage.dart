@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project/components/coffee_tile.dart';
-import 'package:flutter_project/models/coffee.dart';
-import 'package:flutter_project/models/coffee_shop.dart';
+import 'package:flutter_project/models/drink.dart';
+import 'package:flutter_project/models/drink_shop.dart';
 import 'package:flutter_project/pages/payment_page.dart';
 import 'package:provider/provider.dart';
 
@@ -13,9 +13,9 @@ class CartPage extends StatefulWidget {
 }
 
 class _CartPageState extends State<CartPage> {
-  //removei item
+  //remove items
   void removeFromCart(Coffee coffee) {
-    Provider.of<CoffeeShop>(context, listen: false).removeItemFromCart(coffee);
+    Provider.of<DrinkShop>(context, listen: false).removeItemFromCart(coffee);
   }
 
   //pay button tapped
@@ -29,7 +29,7 @@ class _CartPageState extends State<CartPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<CoffeeShop>(
+    return Consumer<DrinkShop>(
       builder: (context, value, child) => SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(25.0),

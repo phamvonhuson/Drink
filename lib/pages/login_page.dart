@@ -28,7 +28,7 @@ class _LoginPageState extends State<LoginPage> {
       return;
     }
 
-    // Thử đăng nhập
+    // test login
     try {
       await _authService.signIn(email, password);
       Navigator.pushReplacement(
@@ -56,17 +56,17 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Icon khóa
+              // Icon of shop
               Icon(
-                Icons.lock,
+                Icons.shop,// icon of shop
                 size: 100,
                 color: primaryColor,
               ),
               const SizedBox(height: 20),
 
-              // Tiêu đề
+              // Text "Welcome to the Drink Shop"
               const Text(
-                "Welcome to the Coffee Shop",
+                "Welcome to the Drink Shop",
                 style: TextStyle(
                   color: textColor,
                   fontSize: 20,
@@ -74,7 +74,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const SizedBox(height: 20),
 
-              // Ô nhập email
+              // email
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: TextField(
@@ -92,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const SizedBox(height: 15),
 
-              // Ô nhập password
+              // password
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: TextField(
@@ -124,13 +124,13 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const SizedBox(height: 20),
 
-              // Nút Login
+              // login button
               ElevatedButton(
                 onPressed: () {
                   final email = _emailController.text;
                   final password = _passwordController.text;
 
-                  // Kiểm tra nếu các trường không trống
+                  // check if email and password are empty
                   if (email.isEmpty || password.isEmpty) {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
@@ -138,12 +138,12 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     );
                   } else {
-                    // Điều hướng đến Homepage ngay khi nhấn Login
+                    // backend login
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                         builder: (context) =>
-                            const Homepage(), // Điều hướng đến Homepage
+                            const Homepage(), // homepage.dart
                       ),
                     );
                   }
@@ -153,18 +153,18 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 child: const Text(
                   "Login",
-                  style: TextStyle(color: textColor),
+                  style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                 ),
               ),
               const SizedBox(height: 20),
 
-              // Liên kết Sign Up
+              // signUp
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
                     "If you don't have an account, ",
-                    style: TextStyle(color: textColor),
+                    style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                   ),
                   GestureDetector(
                     onTap: () {
@@ -183,7 +183,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: const Text(
                       "Sign Up",
                       style: TextStyle(
-                        color: primaryColor,
+                        color: Color.fromARGB(255, 0, 0, 0),
                         fontWeight: FontWeight.bold,
                       ),
                     ),

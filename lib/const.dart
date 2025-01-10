@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-// Màu nền
+// background color
 const Color backgroundColor =
-    Color(0xFFBDBDBD); // Một màu xám cố định (Grey 300)
+    Colors.grey;
 
-// Màu chính (primary color)
-const Color primaryColor = Colors.brown;
+// primary color
+const Color primaryColor = Color.fromARGB(255, 255, 255, 255);
 
-// Màu text
-const Color textColor = Colors.white;
+// text color
+const Color textColor = Color.fromARGB(255, 255, 255, 255);
 
-// Màu input field
-const Color inputFieldColor = Colors.white;
+// input field color
+const Color inputFieldColor = Color.fromARGB(255, 255, 255, 255);
 
-// Màu viền
-const Color borderColor = Colors.grey;
+// border color
+const Color borderColor = Colors.blueGrey;
